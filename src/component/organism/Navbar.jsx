@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const links = [
     { name: "Notes", href: "#notes" },
-    { name: "PYQs", href: "/branch-selection" },
+    { name: "PYQs", href: "/pyqs" },
     { name: "Community", href: "#community" },
     { name: "Events", href: "#events" },
     { name: "Resources", href: "#resources" },
