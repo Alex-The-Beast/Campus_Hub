@@ -8,8 +8,9 @@ const Navbar = () => {
   const links = [
     { name: "Notes", href: "#notes" },
     { name: "PYQs", href: "/pyqs" },
-    { name: "Community", href: "#community" },
-    { name: "Events", href: "#events" },
+     { name: "Events", href: "#events" },
+    { name: "Discussion", href: "/discussion" },
+   
     { name: "Resources", href: "#resources" },
   ];
 

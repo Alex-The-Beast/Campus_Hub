@@ -10,7 +10,7 @@ const BranchCards = () => {
     ["CSE", "ECE", "ME", "CE", "EE", "BT", "CHE", "IT"],
     ["Finance", "HR", "Marketing", "Operations", "Strategy", "Analytics"],
     ["History", "Geography", "Political", "Economics", "Psychology", "Sociology"],
-    ["New1", "New2", "New3", "New4", "New5", "New6"],
+    ["New1", "New2", "New3", "New4", "New5", "New6 "], 
   ];
 
   const headings = ["Bachelor of Technology", "Management", "Arts", "Coming Soon"];

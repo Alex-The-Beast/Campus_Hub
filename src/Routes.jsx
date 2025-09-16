@@ -5,6 +5,7 @@ import PyqDashboard from "./component/Page/PyqDashboard";
 import BranchCards from "./component/Page/BranchCards";
 import PdfList from "./component/Page/PdfList";
 import NotFound from "./component/Page/NotFound";
+import Discussion from "./component/Page/Discussion";
 
 const AppRoutes = () => {
   return (
@@ -18,10 +19,12 @@ const AppRoutes = () => {
 
         {/* Dashboard page */}
         <Route path="/pyqs/list" element={<PyqDashboard />} />
+     
 
                 {/* Catch-all route inside layout */}
         <Route path="*" element={<NotFound />} />
       </Route>
+         <Route path='/discussion' element={<Discussion/>}/>
     </Routes>
   );
 };

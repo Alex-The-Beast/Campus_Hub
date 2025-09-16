@@ -4,7 +4,7 @@ import Navbar from "../component/organism/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="">
       <Navbar />
       <Outlet />
       <Footer />
