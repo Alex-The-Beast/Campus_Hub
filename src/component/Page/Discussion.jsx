@@ -3,7 +3,10 @@ import io from "socket.io-client";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const socket = io(import.meta.env.VITE_BACKEND_API_URL);
+const socket = io(import.meta.env.VITE_BACKEND_API_URL_chat);
+// this will work on prod 
+
+// const socket = io("http://localhost:3000/");
 
 
 export default function Discussion() {
@@ -13,6 +16,7 @@ export default function Discussion() {
   const [userCountMessage, setUserCountMessage] = useState(
     "No one else in the room"
   );
+    const [currentUser, setCurrentUser] = useState(null); 
 
   const messagesEndRef = useRef(null);
   const messagesContainerRef = useRef(null);
@@ -32,6 +36,8 @@ export default function Discussion() {
     socket.on("receiveMessage", (msg) => setMessages((prev) => [...prev, msg]));
     socket.on("userTyping", (typingList) => setTypingUsers(typingList));
     socket.on("updateUserCount", (msg) => setUserCountMessage(msg));
+      // 👇 NEW: get my nickname from server
+    socket.on("yourInfo", (data) => setCurrentUser(data.nickname));
 
     return () => {
       socket.off("chatHistory");
@@ -92,7 +98,13 @@ export default function Discussion() {
               className="mb-4"
             >
               <div className="inline-block px-4 py-2 rounded-2xl bg-black/70 backdrop-blur-md border border-gray-800 shadow-md">
-                <span className="font-bold text-green-400">{msg.user}: </span>
+                <span
+                  className={`font-bold ${
+                    msg.user === currentUser ? "text-blue-400" : "text-green-400"
+                  }`}
+                >
+                  {msg.user}:
+                </span>{" "}
                 <span>{msg.text}</span>
               </div>
               <div className="text-xs text-gray-500 mt-1 ml-2">
