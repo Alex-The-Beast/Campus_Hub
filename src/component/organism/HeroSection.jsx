@@ -1,10 +1,10 @@
 // src/component/organism/HeroSection.jsx
 const HeroSection = () => {
   return (
-    <section className="relative py-18 flex items-center justify-center overflow-hidden mt-12 sm:mx-18 sm:rounded-3xl bg-black">
+    <section className="relative py-18 flex items-center justify-center overflow-hidden mt-12 sm:mx-18 rounded-3xl bg-black">
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 sm:rounded-3xl"
+        className="absolute inset-0 rounded-3xl"
         style={{
           background: `
             radial-gradient(circle at top left, rgba(99,102,241,0.25), transparent 40%),
