@@ -31,7 +31,7 @@ export default function DiscussionForumSection() {
                 viewport={{ once: true }}
                 className="max-w-4xl"
               >
-                <p className="text-gray-300 font-semibold text-md sm:text-lg md:text-2xl leading-relaxed">
+                <p className="text-gray-300 font-semibold text-sm sm:text-lg md:text-2xl leading-relaxed">
                   Our{" "}
                   <span className="text-indigo-300 font-medium">
                     Discussion Forum
