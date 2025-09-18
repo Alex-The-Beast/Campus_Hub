@@ -6,9 +6,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Notes", href: "#notes" },
+    { name: "Notes", href: "/notes" },
     { name: "PYQs", href: "/pyqs" },
-     { name: "Events", href: "#events" },
+     { name: "Events", href: "/events" },
     { name: "Discussion", href: "/discussion" },
    
     { name: "Resources", href: "/resources" },
@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <ul className="hidden md:flex space-x-10 text-base md:text-lg font-secondary">
+      <ul className="hidden md:flex space-x-10 text-base md:text-lg font-secondary mr-20">
         {links.map((link) => (
           <li key={link.name} className="relative group">
             <a
@@ -38,10 +38,10 @@ const Navbar = () => {
       </ul>
 
       {/* Right actions */}
-      <div className="hidden md:flex items-center space-x-6">
+      {/* <div className="hidden md:flex items-center space-x-6">
         <Search className="w-6 h-6 cursor-pointer hover:text-[var(--accent-violet)] transition-colors" />
         <User className="w-6 h-6 cursor-pointer hover:text-[var(--accent-violet)] transition-colors" />
-      </div>
+      </div> */}
 
       {/* Mobile Hamburger */}
       <div className="md:hidden">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-[90%] bg-[var(--primary-black)] rounded-2xl flex flex-col items-center py-4 space-y-4 shadow-xl md:hidden">
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-[90%] bg-[var(--primary-black)] rounded-2xl flex flex-col items-center py-4 space-y-4 shadow-xl md:hidden p-18">
           {links.map((link) => (
             <a
               key={link.name}
@@ -62,10 +62,10 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <div className="flex items-center space-x-6 mt-2">
+          {/* <div className="flex items-center space-x-6 mt-2">
             <Search className="w-5 h-5 cursor-pointer hover:text-[var(--accent-violet)] transition-colors" />
             <User className="w-5 h-5 cursor-pointer hover:text-[var(--accent-violet)] transition-colors" />
-          </div>
+          </div> */}
         </div>
       )}
     </nav>
