@@ -2,17 +2,11 @@
 const Footer = () => {
   return (
     <footer
-      className="relative"
-      style={{ backgroundColor: "var(--light-gray)", color: "var(--primary-black)" }}
+      className="relative "
+  
     >
-      {/* Accent bar at top using theme gradient */}
-      <div
-        className="h-1"
-        style={{ background: "var(--gradient-violet)" }}
-      ></div>
-
       {/* Main footer content */}
-      <div className="px-6 py-16 md:px-16 lg:px-24">
+      <div className="px-6 pt-16 pb-4 md:px-16 lg:px-24 bg-gradient-to-b from-white via-white to-gray-900">
         {/* Three column layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Left Column - Let's talk */}
@@ -163,29 +157,17 @@ const Footer = () => {
         </div>
 
         {/* Large inverted brand text */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 ">
           <h1
-            className="text-8xl md:text-9xl lg:text-[12rem] font-primary font-bold tracking-wider transform rotate-180 select-none"
-            style={{ color: "var(--primary-black)" }}
+            className="text-8xl md:text-9xl lg:text-[12rem] font-primary font-bold tracking-wider transform rotate-180 select-none text-gray-600"
+       
           >
             HUB CAMPUS 
           </h1>
         </div>
+  
       </div>
-
-      {/* Bottom accent bar with copyright using theme gradient */}
-      <div
-        className="px-6 py-4 md:px-16 lg:px-24"
-        style={{ background: "var(--gradient-violet)" }}
-      >
-        <div
-          className="flex justify-between items-center text-sm font-secondary"
-          style={{ color: "var(--primary-black)" }}
-        >
-          <span>©CAMPUS HUB</span>
-          <span>POLICIES</span>
-        </div>
-      </div>
+    
     </footer>
   );
 };
