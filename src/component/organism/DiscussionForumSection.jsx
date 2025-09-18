@@ -4,7 +4,7 @@ export default function DiscussionForumSection() {
   return (
     <>
       <div className="text-center mt-12 md:mt-24">
-        <h2 className="text-4xl md:text-5xl pt-16 font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 via-blue-300 to-gray-100">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl pt-16 font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 via-blue-300 to-gray-100">
           Join the Discussion Forum
         </h2>
       </div>
