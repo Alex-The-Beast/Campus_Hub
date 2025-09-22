@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // src/component/organism/HeroSection.jsx
 const HeroSection = () => {
   return (
@@ -43,8 +45,9 @@ const HeroSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           {/* Primary CTA */}
-          <button
-            className="group relative px-8 py-4 bg-white text-black font-secondary font-semibold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-2xl"
+          <Link to="/pyqs">
+                 <button
+            className="group relative px-8 py-4 bg-white text-black font-secondary font-semibold text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-2xl cursor-pointer"
             style={{
               boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
             }}
@@ -53,12 +56,14 @@ const HeroSection = () => {
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
-              Join Your Campus
+              View PYQs
             </span>
           </button>
+          </Link>
 
           {/* Secondary CTA */}
-          <button className="group px-8 py-4 border-2 border-white/30 text-white font-secondary font-semibold text-lg rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
+         <Link to="/discussion">
+          <button className="group px-8 py-4 border-2 border-white/30 text-white font-secondary font-semibold text-lg rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm cursor-pointer">
             <span className="flex items-center gap-3">
               Explore Features
               <svg
@@ -76,6 +81,7 @@ const HeroSection = () => {
               </svg>
             </span>
           </button>
+         </Link>
         </div>
 
         {/* Feature Preview Cards */}

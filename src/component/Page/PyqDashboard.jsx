@@ -80,7 +80,7 @@ const PyqDashboard = () => {
             </select>
           </div>
 
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium mb-1">Semester</label>
             <select
               className="w-full p-2 bg-gray-900 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -92,7 +92,7 @@ const PyqDashboard = () => {
                 <option key={s} value={s}>{s}</option>
               ))}
             </select>
-          </div>
+          </div> */}
 
           <div>
             <label className="block text-sm font-medium mb-1">Exam Type</label>
