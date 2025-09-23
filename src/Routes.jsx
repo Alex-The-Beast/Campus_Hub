@@ -3,11 +3,13 @@ import MainLayout from "./Layout/MainLayout";
 import HomePage from "./component/Page/HomePage";
 import PyqDashboard from "./component/Page/PyqDashboard";
 import BranchCards from "./component/Page/BranchCards";
-import PdfList from "./component/Page/PdfList";
+
 import NotFound from "./component/Page/NotFound";
 import Discussion from "./component/Page/Discussion";
+
+
+import Updates from "./component/Page/Updates";
 import Resources from "./component/Page/Resources";
-import Notes from "./component/Page/Notes";
 
 const AppRoutes = () => {
   return (
@@ -21,8 +23,8 @@ const AppRoutes = () => {
 
         {/* Dashboard page */}
         <Route path="/pyqs/list" element={<PyqDashboard />} />
+        <Route path='/updates' element={<Updates/>}/>
         <Route path='/resources' element={<Resources/>}/>
-        <Route path='/notes' element={<Notes/>}/>
      
 
                 {/* Catch-all route inside layout */}
