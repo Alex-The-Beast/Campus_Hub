@@ -10,6 +10,7 @@ import Discussion from "./component/Page/Discussion";
 
 import Updates from "./component/Page/Updates";
 import Resources from "./component/Page/Resources";
+import NotesList from "./component/Page/NotesList";
 
 const AppRoutes = () => {
   return (
@@ -24,13 +25,15 @@ const AppRoutes = () => {
         {/* Dashboard page */}
         <Route path="/pyqs/list" element={<PyqDashboard />} />
         <Route path='/updates' element={<Updates/>}/>
-        <Route path='/resources' element={<Resources/>}/>
+     
      
 
                 {/* Catch-all route inside layout */}
         <Route path="*" element={<NotFound />} />
       </Route>
          <Route path='/discussion' element={<Discussion/>}/>
+            <Route path='/resources' element={<Resources/>}/>
+        <Route path='/resources/noteslist' element={<NotesList/>}/>
     </Routes>
   );
 };
